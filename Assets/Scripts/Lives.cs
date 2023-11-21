@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -13,8 +14,12 @@ public class Lives : MonoBehaviour
     public Sprite FullHearts;
     public Sprite EmptyHearts;
 
+    public PlayerHealth playerhealth;
+
     void Update()
     {
+        Health = playerhealth.health; // zorgt er voor dat het de zelfde levens values heeft als de PlayerHealth script
+        NumberOfHearts = playerhealth.maxhealth; // zorgt er voor dat het de max aantal leven toont.
         if(Health > NumberOfHearts)
         {
             Health = NumberOfHearts;
@@ -38,15 +43,6 @@ public class Lives : MonoBehaviour
             {
                 hearts[i].enabled = false;
             }
-        }
-    }
-    public void DoDamage(int damage)
-    {
-        Health -= damage;
-
-        if (Health < 0)
-        {
-            Health = 0;
         }
     }
 }

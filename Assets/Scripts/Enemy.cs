@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     SpriteRenderer sr;
+    public int damage = 1;
 
     private void Start()
     {
@@ -15,8 +16,9 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            var player = collision.gameObject.GetComponent<Lives>();
-            player.DoDamage(1);
+            // zorgt er voor dat het object met de tag Player een leven af krijgt als die de enemy aanraakt. 
+            var player = collision.gameObject.GetComponent<PlayerHealth>();
+            player.TakeDamage(damage);
         }
     }
 }

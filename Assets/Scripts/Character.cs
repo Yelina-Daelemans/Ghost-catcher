@@ -26,12 +26,11 @@ public class Character : MonoBehaviour
 
     void Update()
     {
-        Rb.velocity = new Vector2(Input.GetAxis("Horizontal") * Speed, Rb.velocity.y);
 
+        // zorgt er voor dat de speler kan bewegen
+        Rb.velocity = new Vector2(Input.GetAxis("Horizontal") * Speed, Rb.velocity.y);
         Flip();
     }
-
-
     private void Flip()
     {
         if (isFacingRight && Rb.velocity.x < 0f || !isFacingRight && Rb.velocity.x > 0f)
@@ -42,5 +41,6 @@ public class Character : MonoBehaviour
             transform.localScale = localScale;
         }
     }
+
 }
 // als er damage wordt genomen veranderd de kleur van het leven nvan rood naar grijs

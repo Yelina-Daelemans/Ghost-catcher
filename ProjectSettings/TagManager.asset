@@ -59,3 +59,6 @@ TagManager:
   - name: Health
     uniqueID: 410385799
     locked: 0
+  - name: Options background
+    uniqueID: 3628843659
+    locked: 0
