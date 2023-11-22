@@ -23,6 +23,7 @@ public class PlayerHealth : MonoBehaviour
         {
             playerRender.enabled = false;
             movement.enabled = false;
+            LevelManager.instance.GameOver();
         }
     }
 }
