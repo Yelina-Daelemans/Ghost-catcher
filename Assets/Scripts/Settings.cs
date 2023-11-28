@@ -6,21 +6,35 @@ using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
 {
-    public AudioMixer audiomixer;
+    //public AudioMixer audiomixer;
     Resolution[] resolutions;
-    public Dropdown resolutionsdropdown;
+    public TMPro.TMP_Dropdown resolutionsDropdown;
 
     void Start()
     {
         resolutions = Screen.resolutions;
-        resolutionsdropdown.ClearOptions();
-        List<string> options = new List<string>();
-        for(int i = 0; i < resolutions.Length; i++)
+        resolutionsDropdown.ClearOptions();
+        List<string> option  = new List<string>();
+
+        int CurrentResolutionIndex = 0;
+        for (int i = 0; i < resolutions.Length; i++)
         {
             string options = resolutions[i].width + "x" + resolutions[i].height;
-            options.Add(option);
+            option.Add(options);
+
+            if(resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
+            {
+                CurrentResolutionIndex = i;
+            }
         }
-        resolutionsdropdown.AddOptions(resolutions);
+        resolutionsDropdown.AddOptions(option);
+        resolutionsDropdown.value = CurrentResolutionIndex;
+        resolutionsDropdown.RefreshShownValue();
+    }
+    public void SetResolution(int resolutionIndex)
+    {
+        Resolution resolution = resolutions[resolutionIndex];
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
     public void SetVolume(float volume)
     {
