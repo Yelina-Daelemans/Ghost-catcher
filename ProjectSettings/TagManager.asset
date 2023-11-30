@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Hammer
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -12,8 +14,8 @@ TagManager:
   - Water
   - UI
   - Player
-  - 
-  - 
+  - Hammer
+  - Enemy
   - 
   - 
   - 
@@ -49,6 +51,9 @@ TagManager:
     locked: 0
   - name: Background 3
     uniqueID: 3152571365
+    locked: 0
+  - name: Hammer
+    uniqueID: 2029250537
     locked: 0
   - name: character
     uniqueID: 2627854179
