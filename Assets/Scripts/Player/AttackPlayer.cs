@@ -23,6 +23,6 @@ public class AttackPlayer : MonoBehaviour
             var Enemy = collision.gameObject.GetComponent<EnemyHealth>();
             Enemy.Damage(damage);
         }
-        Destroy(gameObject);
+        
     }
 }
