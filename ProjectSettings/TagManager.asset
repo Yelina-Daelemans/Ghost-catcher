@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Hammer
   - Enemy
+  - Life
+  - gameMusic
   layers:
   - Default
   - TransparentFX
@@ -58,11 +60,11 @@ TagManager:
   - name: character
     uniqueID: 2627854179
     locked: 0
-  - name: ghost
-    uniqueID: 1756191061
-    locked: 0
   - name: Health
     uniqueID: 410385799
+    locked: 0
+  - name: ghost
+    uniqueID: 1756191061
     locked: 0
   - name: Options background
     uniqueID: 3628843659
