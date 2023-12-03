@@ -17,6 +17,7 @@ public class Jumpcontroller : MonoBehaviour
 
     void Update()
     { 
+        //met deze code kan de speler niet meerdere keren springen in de lucht en kan die pas terug springen als die de grond raakt
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
@@ -24,6 +25,7 @@ public class Jumpcontroller : MonoBehaviour
     }
     private bool IsGrounded()
     {
+        //dit is de code dat nachecked of dat de speler op de grond is geland of niet
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
     }
 }

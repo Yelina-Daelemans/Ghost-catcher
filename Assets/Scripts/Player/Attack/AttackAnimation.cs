@@ -14,6 +14,7 @@ public class AttackAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // zorgt er voor dat de animatie getoont wordt als je klikt met je muis
         if(Input.GetMouseButtonDown(0))
         {
             anim.SetTrigger("Attack");

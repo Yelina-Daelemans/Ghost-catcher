@@ -5,10 +5,11 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     SpriteRenderer sr;
-    public int damage = 1;
+    public int damage = 1; //de 1 is de schade dat het doet
 
     private void Start()
     {
+        // initializeert de sprite renderer op sr
         sr = GetComponent<SpriteRenderer>();
     }
 

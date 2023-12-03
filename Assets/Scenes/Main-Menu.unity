@@ -579,7 +579,6 @@ GameObject:
   m_Component:
   - component: {fileID: 387176993}
   - component: {fileID: 387176992}
-  - component: {fileID: 387176994}
   m_Layer: 0
   m_Name: BackgroundMusic
   m_TagString: Untagged
@@ -596,7 +595,7 @@ AudioSource:
   m_GameObject: {fileID: 387176991}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 164ea89620b21f846a2aa04b58096d74, type: 2}
   m_audioClip: {fileID: 8300000, guid: c9ca4cab8962b91419f9e5e9e27215d9, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -698,18 +697,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &387176994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 387176991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81981299d3c3f84198199b130f53c8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &504083819 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8799468819480452877, guid: 7f8958bf168a35d42831cc22236c5b3b, type: 3}
@@ -730,7 +717,7 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
-  - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -738,14 +725,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &519420029
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -812,6 +791,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &519420033
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
 --- !u!1 &535195441
 GameObject:
   m_ObjectHideFlags: 0
@@ -3121,6 +3108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26fca908da38f4b429fde44521063f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audiomixer: {fileID: 24100000, guid: 164ea89620b21f846a2aa04b58096d74, type: 2}
   resolutionsDropdown: {fileID: 1190646157}
 --- !u!1 &1655995202
 GameObject:
@@ -4524,6 +4512,42 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 318911145601423891, guid: 7f8958bf168a35d42831cc22236c5b3b, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 318911145601423891, guid: 7f8958bf168a35d42831cc22236c5b3b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 318911145601423891, guid: 7f8958bf168a35d42831cc22236c5b3b, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 318911145601423891, guid: 7f8958bf168a35d42831cc22236c5b3b, type: 3}
+      propertyPath: m_Color.b
+      value: 0.32941177
+      objectReference: {fileID: 0}
+    - target: {fileID: 318911145601423891, guid: 7f8958bf168a35d42831cc22236c5b3b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.32941177
+      objectReference: {fileID: 0}
+    - target: {fileID: 318911145601423891, guid: 7f8958bf168a35d42831cc22236c5b3b, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 318911145601423891, guid: 7f8958bf168a35d42831cc22236c5b3b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 318911145601423891, guid: 7f8958bf168a35d42831cc22236c5b3b, type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 318911145601423891, guid: 7f8958bf168a35d42831cc22236c5b3b, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2461108974123349767, guid: 7f8958bf168a35d42831cc22236c5b3b, type: 3}
       propertyPath: m_SizeDelta.x
       value: 334.488
@@ -4542,7 +4566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4078444308411614914, guid: 7f8958bf168a35d42831cc22236c5b3b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 75
+      value: -204
       objectReference: {fileID: 0}
     - target: {fileID: 4270614079516112029, guid: 7f8958bf168a35d42831cc22236c5b3b, type: 3}
       propertyPath: m_Pivot.x

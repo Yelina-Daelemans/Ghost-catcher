@@ -12,16 +12,13 @@ public class EnemyHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // laat de enemy starten met volledige levens
         health = maxhealth;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void Damage(int damage)
     {
+        // zorgt er voor dat als de enemy dood gaat dat die niet meer bestaat.
         health -= damage;
         if (health <= 0)
         {

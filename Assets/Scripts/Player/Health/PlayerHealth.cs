@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
 
     public SpriteRenderer playerRender;
     public Character movement;
-    
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,14 +22,17 @@ public class PlayerHealth : MonoBehaviour
         health -= amount;
         if(health <= 0)
         {
+            // hiermee kan je speler niet meer bewegen en kan je die ook niet meer zien als die dood is
             playerRender.enabled = false;
             movement.enabled = false;
             //GameOver() zorgt er voor dat je een game over scherm krijgt te zien.
             LevelManager.instance.GameOver();
+            
         }
     }
     public void AddHealth(int value)
     {
+        // hiermee kan je een leven bij krijgen
         health = Mathf.Clamp(health + value, 0, maxhealth); 
     }
 }

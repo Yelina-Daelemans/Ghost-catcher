@@ -13,6 +13,8 @@ public class Character : MonoBehaviour
 
     [SerializeField] float Speed = 5f;
 
+    
+
     private void Awake()
     {
         Rb = GetComponent<Rigidbody2D>();
@@ -34,6 +36,7 @@ public class Character : MonoBehaviour
     }
     private void Flip()
     {
+        //als de speler naar de andere kant loopt draait die met deze code zich ook om.
         if (isFacingRight && Rb.velocity.x < 0f || !isFacingRight && Rb.velocity.x > 0f)
         {
             isFacingRight = !isFacingRight;
